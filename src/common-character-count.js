@@ -15,7 +15,7 @@ function getCommonCharacterCount(s1, s2) {
   let obj1 = getCharactersCountFromString(s1);
   let obj2 = getCharactersCountFromString(s2);
 
-  return Object.values(obj1).reduce((acc, item) => {
+  return Object.keys(obj1).reduce((acc, item) => {
     acc += Math.min(obj1[item] || 0, obj2[item] || 0);
 
     return acc;
